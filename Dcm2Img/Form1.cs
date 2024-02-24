@@ -8,8 +8,6 @@ namespace Dcm2Img {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
-            label1.Text = "";
-            progressBar1.Visible = false;
         }
 
         private void ButtonSelectFolder_Click(object sender, EventArgs e) {
@@ -21,12 +19,9 @@ namespace Dcm2Img {
         }
 
         private void ButtonStart_Click(object sender, EventArgs e) {
-            // Example usage: recursively find DICOM files in a directory and convert them to JPGs
-            string startingDir = textBox1.Text;
-            progressBar1.Visible = true;
-
-            FindDicomFilesRecursively(startingDir);
-
+            //recursively find DICOM files in a directory and convert them to JPGs
+            if (String.IsNullOrEmpty(textBox1.Text)) return;
+            FindDicomFilesRecursively(textBox1.Text);
         }
 
         private void LogMsg(string msg) {
@@ -110,15 +105,14 @@ namespace Dcm2Img {
 
         // Function to convert a DICOM file to JPG
         private void ConvertDicom(string dicomPath, string jpgPath) {
-
             // Use fo-dicom's rendering capabilities
              try {
-            DicomImage image = new DicomImage(dicomPath);
-            // Ensure it's a suitable DICOM format for conversion
-            //image.RenderImage().As<Bitmap>().Save(jpgPath);
-            var sharpimage = image.RenderImage().AsSharpImage();
-            sharpimage.SaveAsJpeg(jpgPath);
-            sharpimage.Dispose();
+                DicomImage image = new DicomImage(dicomPath);
+                // Ensure it's a suitable DICOM format for conversion
+                //image.RenderImage().As<Bitmap>().Save(jpgPath);
+                var sharpimage = image.RenderImage().AsSharpImage();
+                sharpimage.SaveAsJpeg(jpgPath);
+                sharpimage.Dispose();
 
                }
                catch (DicomException ex) {

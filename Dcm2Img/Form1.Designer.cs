@@ -59,9 +59,9 @@
             // ButtonStart
             // 
             ButtonStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ButtonStart.Location = new Point(1005, 729);
+            ButtonStart.Location = new Point(983, 716);
             ButtonStart.Name = "ButtonStart";
-            ButtonStart.Size = new Size(112, 34);
+            ButtonStart.Size = new Size(134, 47);
             ButtonStart.TabIndex = 2;
             ButtonStart.Text = "Convert";
             ButtonStart.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 78);
             label1.Name = "label1";
-            label1.Size = new Size(59, 25);
+            label1.Size = new Size(341, 25);
             label1.TabIndex = 5;
-            label1.Text = "label1";
+            label1.Text = "Select directory to search for dicom files...";
             // 
             // textBox2
             // 
@@ -90,7 +90,7 @@
             textBox2.Location = new Point(14, 146);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(1103, 577);
+            textBox2.Size = new Size(1103, 564);
             textBox2.TabIndex = 6;
             // 
             // Form1
