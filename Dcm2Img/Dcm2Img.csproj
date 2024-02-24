@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fo-dicom" Version="5.1.2" />
+    <PackageReference Include="fo-dicom.Desktop" Version="4.0.8" />
+    <PackageReference Include="fo-dicom.Imaging.Desktop" Version="5.1.2" />
+    <PackageReference Include="fo-dicom.Imaging.ImageSharp" Version="5.1.2" />
+  </ItemGroup>
+
+</Project>
