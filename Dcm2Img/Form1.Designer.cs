@@ -30,6 +30,7 @@
             progressBar1 = new ProgressBar();
             label1 = new Label();
             textBox2 = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -90,14 +91,26 @@
             textBox2.Location = new Point(14, 146);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
+            textBox2.ScrollBars = ScrollBars.Vertical;
             textBox2.Size = new Size(1103, 564);
             textBox2.TabIndex = 6;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(828, 729);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 7;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1129, 775);
+            Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(label1);
             Controls.Add(progressBar1);
@@ -120,5 +133,6 @@
         private ProgressBar progressBar1;
         private Label label1;
         private TextBox textBox2;
+        private Button button1;
     }
 }
